@@ -7,7 +7,7 @@ import ProgressBar from "../components/ProgressBar";
 import Button from "../components/Button";
 import { FiRotateCw } from "react-icons/fi";
 export interface ChemQuizInterface {
-	quizData: Array<Object>;
+	quizData: Array<any>;
 	rank: number;
 }
 const QuizPage = ({ quizData, rank }: ChemQuizInterface) => {
@@ -60,7 +60,7 @@ const QuizPage = ({ quizData, rank }: ChemQuizInterface) => {
 						<h1 className="quiz-page-question">
 							{quizData[questionNumber].question}
 						</h1>
-						{quizData[questionNumber].options.map((ele: Object) => (
+						{quizData[questionNumber].options.map((ele: any) => (
 							<Button
 								classname={"button-options"}
 								onclick={(e) => optionClickHandler(e, ele.isRight)}
